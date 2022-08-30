@@ -42,16 +42,20 @@ h1{
     padding: 40px;
 }
 
+.addList h3{
+    font-style: italic;
+}
+
 .addList input{
     margin-top: 20px;
     padding: 5px;
 }
 
-.addList input:nth-child(3){
+.addList #productName{
     width: 350px;
 }
 
-.addList input:nth-child(4){
+.addList #buttonProduct{
     margin-left: 10px;
     width: 100px;
     border-radius: 15px;
@@ -59,7 +63,7 @@ h1{
     background-color: rgb(224, 255, 254);
 }
 
-.addList input:nth-child(4):hover{
+.addList #buttonProduct:hover{
     font-weight: bold;
     background-color: rgb(195, 255, 253);
 }
