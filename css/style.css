@@ -13,11 +13,17 @@ h1{
     font-family: 'Pacifico', cursive;
 }
 
+.contenitor-blocknotes{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
 .blocknotes{
     background-image: url("../img/blocknotes.jpeg");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 70vh;
+    width: 750px;
     position: relative;
 }
 
@@ -30,4 +36,30 @@ h1{
     background-color: rgb(255, 255, 255, 0);
     font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
+}
+
+.addList{
+    padding: 40px;
+}
+
+.addList input{
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.addList input:nth-child(3){
+    width: 350px;
+}
+
+.addList input:nth-child(4){
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 15px;
+    border: 2px solid rgb(98, 221, 255);
+    background-color: rgb(224, 255, 254);
+}
+
+.addList input:nth-child(4):hover{
+    font-weight: bold;
+    background-color: rgb(195, 255, 253);
 }
