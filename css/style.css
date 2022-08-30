@@ -7,3 +7,27 @@
 body {
     font-family: sans-serif;
 }
+
+h1{
+    padding: 20px 40px;
+    font-family: 'Pacifico', cursive;
+}
+
+.blocknotes{
+    background-image: url("../img/blocknotes.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70vh;
+    position: relative;
+}
+
+#notes{
+    position: absolute;
+    top: 110px;
+    left: 370px;
+    transform: rotate(-9deg);
+    border: none;
+    background-color: rgb(255, 255, 255, 0);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
+}
