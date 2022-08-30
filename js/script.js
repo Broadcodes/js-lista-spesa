@@ -28,32 +28,34 @@ buttonProduct.addEventListener("click", function () {
     if (product.value.toLowerCase() !== VALORE_SENTINELLA && isNaN(product.value)) {
         shoppingList[index] = product.value;
         index++;
-    }
+    } else {
+        // Acquisizione dell'elemento input HTML per mostrare i prodotti nella text area
+        const notes = document.getElementById("notes");
+        let product;
 
-    if (shoppingList.length !== 0) {
-        buttonVisualProduct.disabled = false;
+        let index = 0;
+
+        while (index < shoppingList.length) {
+            // Creazione di dell'elemento "li" ad ogni ciclo
+            product = document.createElement("li");
+
+            // Se la lunghezza dell'array da visualizzare è maggiore di 10 elementi vengono visualizzati con alcune proprietà
+            if (shoppingList.length > 10) {
+                notes.classList.add("note");
+                notes.style.maxHeight = "320px";
+                notes.style.paddingLeft = "30px";
+            }
+
+            // inserimento del valore nell'elemento "li"
+            product.innerHTML += shoppingList[index];
+            notes.append(product);
+            index++;
+        }
+
+        // Disattiazione del pulsante "Inserimento prodotti"
+        buttonProduct.disabled = true;
     }
 
     // Rimuove qualsiasi testo presente nell'input
     product.value = "";
 });
-
-// Aggiungiamo evento al pulsante "Visualizza lista"
-buttonVisualProduct.addEventListener("click", function () {
-    // Acquisizione dell'elemento input HTML per mostrare i prodotti nella text area
-    const notes = document.getElementById("notes");
-    let product;
-
-    let index = 0;
-
-    while (index < shoppingList.length) {
-        // Creazione di dell'elemento "li" ad ogni ciclo
-        product = document.createElement("li");
-        
-        // inserimento del valore nell'elemento "li"
-        product.innerHTML += shoppingList[index];
-        notes.append(product);
-        index++;
-    } 
-});
-
