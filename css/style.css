@@ -55,15 +55,21 @@ h1{
     width: 350px;
 }
 
-.addList #buttonProduct{
+.areaButton{
+    display: flex;
+}
+.addList #buttonProduct,
+.addList #buttonVisualProduct{
     margin-left: 10px;
-    width: 100px;
+    padding: 5px 10px;
+    width: 150px;
     border-radius: 15px;
     border: 2px solid rgb(98, 221, 255);
     background-color: rgb(224, 255, 254);
 }
 
-.addList #buttonProduct:hover{
+.addList #buttonProduct:hover,
+.addList #buttonVisualProduct:hover{
     font-weight: bold;
     background-color: rgb(195, 255, 253);
 }
